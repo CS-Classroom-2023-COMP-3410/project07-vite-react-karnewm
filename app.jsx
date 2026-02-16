@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
-import ProductsPage from "./ProductsPage";
+import ProductsPage from "./src/pages/ProductsPage";
 import ProfilePage from "./ProfilePage";
 import ShoppingCart from "./ShoppingCart";
 import CartPage from "./CartPage";
@@ -42,14 +42,6 @@ function App() {
         cartCount={cartItems.length}
       />
 
-      {/* Cart summary on EVERY page */}
-      {cartItems.length > 0 && (
-        <ShoppingCart
-          cartItems={cartItems}
-          removeFromCart={removeFromCart}
-          compact
-        />
-      )}
 
       {renderPage()}
     </>

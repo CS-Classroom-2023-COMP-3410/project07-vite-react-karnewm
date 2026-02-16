@@ -1,6 +1,4 @@
-// A reusable button component with customizable appearance
 function Button({ onClick, children, variant = "primary", disabled = false }) {
-  // Define different styles based on variant
   const getButtonStyle = () => {
     switch (variant) {
       case "secondary":
@@ -30,7 +28,6 @@ function Button({ onClick, children, variant = "primary", disabled = false }) {
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
     </button>
   );
 }

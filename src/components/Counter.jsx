@@ -4,7 +4,6 @@ import Button from './Button';
 function Counter({ initialValue = 0, onCountChange = null }) {
   const [count, setCount] = useState(initialValue);
 
-  // Update count and notify parent component if callback provided
   const updateCount = (newCount) => {
     setCount(newCount);
     if (onCountChange) {
