@@ -1,4 +1,4 @@
-function Header({ currentPage, onNavigate, cartCount = 0 }) {
+function Header({ currentPage, onNavigate }) {
     const navStyle = {
         display: 'flex',
         justifyContent: 'space-between',
@@ -6,14 +6,11 @@ function Header({ currentPage, onNavigate, cartCount = 0 }) {
         backgroundColor: '#f8f9fa',
         marginBottom: '20px'
     };
-
     const navItems = [
         { id: 'home', label: 'Home' },
         { id: 'products', label: 'Products' },
-        { id: 'profile', label: 'Profile' },
-        { id: 'cart', label: `Cart (${cartCount})` }
+        { id: 'profile', label: 'Profile' }
     ];
-
     return (
         <header style={navStyle}>
             <div style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
@@ -44,5 +41,4 @@ function Header({ currentPage, onNavigate, cartCount = 0 }) {
         </header>
     );
 }
-
 export default Header;
